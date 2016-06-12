@@ -1,0 +1,9 @@
+name: shinyDemo
+account: sproddle
+server: shinyapps.io
+appId: 108178
+bundleId: 478376
+url: https://sproddle.shinyapps.io/shinyDemo/
+when: 1465699547.66014
+asMultiple: FALSE
+asStatic: FALSE

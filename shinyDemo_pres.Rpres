@@ -1,0 +1,40 @@
+MPG Prediction tool
+========================================================
+author: Roderick Maclean
+date: 6/11/2016
+
+Tool to predict MPG based on the mtcars dataset
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+
+- mtcars has data on 32 different car models
+- Data includes mpg, weight, gearbox type and other data
+- Analysis shows that weight is the strongest predictor of mpg
+- For simplicity we will just use a linear fit
+
+Example mtcars data used in model
+========================================================
+
+```{r , echo=FALSE}
+car<-mtcars[1:10,1:6][, -3][, -3][, -3][, -2]
+car
+```
+
+Correlation of mpg to weight
+========================================================
+
+```{r, echo=FALSE}
+plot(mpg~wt, mtcars)
+abline(mC<- lm(mpg~wt ,mtcars))
+```
+
+Model Fit
+========================================================
+
+```{r, echo=TRUE}
+fit<-lm(formula = mpg ~ wt , data = mtcars)
+
+summary(fit)$coef
+```
